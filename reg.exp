@@ -1,0 +1,20 @@
+import re
+import urllib
+
+x = urllib.urlopen('http://python-data.dr-chuck.net/regex_sum_215333.txt', 'r')
+numlist = list()
+
+for line in x:
+    line = line.rstrip().lstrip()
+    
+    
+    stuff = re.findall('[0-9]+',line)
+    
+    if len(stuff) < 1 : continue
+    
+    for word in stuff:
+       word.split()
+       word = int(word)
+       numlist.append(word)
+       print sum(numlist)
+    
